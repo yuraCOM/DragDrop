@@ -1,0 +1,44 @@
+.appTrello {
+    width: 100vw;
+    /* height: 100vh; */
+        margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.board{
+    min-width: 50px;
+    min-height: 200px;
+    border: 5px solid lightgray;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+
+}
+
+.board_title{
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.item{
+    width: 100%;
+    cursor: grab;
+}
+
+.appTrello .badge{
+    width: 80%;
+    margin: 5px;
+    align-self: center;
+    cursor: pointer;
+    border: 2px solid;
+}
+
+.appTrello .card{
+    margin: 10px;
+}
