@@ -61,9 +61,8 @@ const Board = (props) => {
             return false
         }
         setTodoModal(false)
-
-        console.log(board);
     }
+
 
     return (
 

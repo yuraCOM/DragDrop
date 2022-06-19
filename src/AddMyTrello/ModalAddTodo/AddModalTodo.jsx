@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { } from "react";
 import "./adModalTodo.css";
 import Tools from '../Tools'
 
@@ -9,7 +9,6 @@ const AddModalTodo = (props) => {
   console.log();
 
   function handlerAddTodo(e) {
-    console.log(e.target.value);
     let title = e.target.value
     let todo = title ? { id: Tools.randomN(), title: title } :
       { id: Tools.randomN(), title: 'нет данных' }

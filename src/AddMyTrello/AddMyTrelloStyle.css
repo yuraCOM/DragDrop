@@ -40,5 +40,22 @@
 }
 
 .appTrello .card{
-    margin: 10px;
+    float: right;
+    position: relative;
+}
+
+.appTrello .alert{
+    padding: 10px;
+    display:  flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.appTrello .delTodo.btn.btn-danger{
+    margin-left: 10px;
+    /* position: relative;
+    float: right; */
+
 }

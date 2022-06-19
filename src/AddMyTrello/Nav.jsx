@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import MyModal from './MyModal/MyModal'
 import Tools from './Tools'
 
@@ -24,7 +24,7 @@ const Nav = (props) => {
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">MyTrello</a>
+                    <a className="navbar-brand" href="https://github.com/yuraCOM/DragDrop">MyTrello</a>
 
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -41,7 +41,7 @@ const Nav = (props) => {
                                 <a className="nav-link" href="#">EMPTY</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">About</a>
+                                <a className="nav-link" href="https://yuracom.github.io/CV10-12-2021/">AboutMe</a>
                             </li>
                         </ul>
                     </div>

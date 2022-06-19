@@ -2,14 +2,11 @@ import React from 'react'
 import { randomN } from './Tools'
 
 const Item = (props) => {
-    // console.log('Item', props);
 
     props = props.props
     let board = props.board
-    // console.log(board);
 
     function dragStartHandler(e, board, item) {
-        // console.log('item', item);
         props.setCurrentBoard(board)
         props.setCureentItem(item)
     }
@@ -23,7 +20,6 @@ const Item = (props) => {
 
     function dragLeaveHandler(e) {
         e.target.style.boxShadow = 'none'
-
     }
 
     function dragEndHandler(e) {
@@ -57,23 +53,22 @@ const Item = (props) => {
         e.target.style.boxShadow = 'none'
     }
 
-    function delTodo(e, board, item) {
+    function delTodo(board, item) {
 
         //индекс удаленного дела
         const todoIndex = board.items.indexOf(item)
-        console.log(todoIndex);
         board.items.splice(todoIndex, 1)
-        console.log(board);
-        console.log('props.boards', props.boards);
 
-        let freshBoards = props.boards
+        // board.items.map(item => item)
+        // console.log(board);
+        // console.log(props.boards);
+
+        let freshBoards = props.boards.slice()
         console.log(freshBoards);
         props.setBoards(freshBoards)
 
-        let data = JSON.stringify(props.boards);
-        localStorage.setItem('boards', data);
-        // console.log('set local store', localStorage.getItem('boards'));
-
+        // let data = JSON.stringify(props.boards);
+        // localStorage.setItem('boards', data);
     }
 
     return (
@@ -87,12 +82,10 @@ const Item = (props) => {
                 onDragLeave={(e) => { dragLeaveHandler(e) }}
                 onDragEnd={(e) => { dragEndHandler(e) }}
                 onDrop={(e) => { dropHandler(e, board, item) }}>
-                <button type="button" className="btn-close" data-bs-dismiss="alert"
-                    onClick={(e) => { delTodo(e, board, item) }}></button>
-
                 {item.title}
+                <button type="button" className="delTodo btn btn-danger"
+                    onClick={(e) => delTodo(board, item)}>X</button>
             </div>
-
         )
     )
 }
