@@ -43,7 +43,7 @@ const Board = (props) => {
     }
 
     function delBoard(board) {
-        let del = window.confirm("Удалить?");
+        let del = window.confirm(`Удалить доску: ${board.title}?!`);
         if (del) {
             const currentIndex = boards.indexOf(board)
             boards.splice(currentIndex, 1)
