@@ -1,4 +1,4 @@
-import React, { } from "react";
+import React from "react";
 import "./adModalTodo.css";
 import Tools from '../Tools'
 
@@ -6,7 +6,6 @@ import Tools from '../Tools'
 
 const AddModalTodo = (props) => {
 
-  console.log();
 
   function handlerAddTodo(e) {
     let title = e.target.value
@@ -15,8 +14,9 @@ const AddModalTodo = (props) => {
     props.setTodo(todo)
   }
 
-
-
+  function addhandler() {
+    props.addTodo()
+  }
 
   return (
     <div className={props.TodoModal ? "mymodal " : "mymodal close"} onClick={() => props.setTodoModal(false)}>
@@ -28,12 +28,13 @@ const AddModalTodo = (props) => {
 
         <div className="divAddToDo">
 
-          <input type="text" className="form-control" placeholder="Внесите дело"
-            id="inputDefault" onFocus={(event) => (event.target.placeholder = "")}
+          <input type="text" className="form-control inputAddToDo" placeholder="Внесите дело"
+            id="inputDefault" onFocus={(event) => (event.target.value = "")}
+
             onChange={handlerAddTodo}
           ></input>
 
-          <button type="button" className="btn btn-success" onClick={props.addTodo}>+ADD</button>
+          <button type="button" className="btn btn-success" onClick={addhandler}>+ADD</button>
 
         </div>
 

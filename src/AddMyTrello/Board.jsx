@@ -60,6 +60,10 @@ const Board = (props) => {
         } else {
             return false
         }
+        setBoards(boards.map(b => {
+            return b
+        }
+        ))
         setTodoModal(false)
     }
 
