@@ -81,7 +81,9 @@ const Item = (props) => {
                 onDragOver={(e) => { dragOverHandler(e) }}
                 onDragLeave={(e) => { dragLeaveHandler(e) }}
                 onDragEnd={(e) => { dragEndHandler(e) }}
-                onDrop={(e) => { dropHandler(e, board, item) }}>
+                onDrop={(e) => { dropHandler(e, board, item) }}
+            >
+
                 {item.title}
                 <button type="button" className="delTodo btn btn-danger"
                     onClick={(e) => delTodo(board, item)}>X</button>

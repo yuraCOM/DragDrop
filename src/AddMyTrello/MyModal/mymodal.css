@@ -1,8 +1,55 @@
 .mymodal {
+  height: 100vh;
+  width: 100%;
+  background: rgba(13, 13, 13, 0.961);
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.mymodal.close {
+  display: none;
+}
+
+.mymodal-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  /* position: absolute; */
+  /* top: 50%; */
+}
+
+.mymodal-body .btnModalClose {
+  /* margin: 0 auto 0 85%; */
+}
+
+.mymodal-body .form-control {
+  margin: 15px 0;
+}
+
+.mymodal-body .btn {
+  margin: 10px;
+}
+
+.mymodal-body .btnModalClose {
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 375px) {
+  .mymodal {
     height: 100vh;
     width: 100%;
     background: rgba(13, 13, 13, 0.961);
-    position: absolute;
+    position: fixed;
     z-index: 99999;
     top: 0;
     right: 0;
@@ -11,39 +58,10 @@
     display: flex;
     justify-content: center;
     padding-top: 2rem;
+  }
+
+  .mymodal-body {
+    /* position: fixed; */
+    /* top: 50%; */
+  }
 }
-
-.mymodal.close{
-   display: none;
-}
-
-.mymodal-body {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.mymodal-body .btnModalClose{
-    /* margin: 0 auto 0 85%; */
-}
-
-.mymodal-body .form-control{
-    margin: 15px 0;
-}
-
-.mymodal-body .btn {
-    margin: 10px;
-}
-
-.mymodal-body .btnModalClose {
-    align-self: flex-end;}
-
-@media screen and (max-width: 375px) {
-.mymodal-body {
-        width: 98%;
-    }
-}
-
